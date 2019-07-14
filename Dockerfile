@@ -1,5 +1,5 @@
 FROM alpine:3.8
-LABEL "Tiryoh <tiryoh@gmail.com>"
+LABEL maintainer="Tiryoh <tiryoh@gmail.com>"
 
 RUN apk add --no-cache \
     su-exec \
