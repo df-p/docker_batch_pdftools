@@ -8,9 +8,14 @@ docker run --rm -v $(pwd):/pdf -e UID=$(id -u) -e GID=$(id -g) df-p/pdftools [co
 
 ### commands
 
-encrypt PDF
+encrypt single PDF
 ```
-qpdf --encrypt USERPASS OWNERPASS KEYLENGTH -- source.pdf destination.pdf 
+qpdf --encrypt $USERPASS $OWNERPASS $KEYLENGTH -- $SOURCE.pdf $DESTINATION.pdf 
+```
+
+encrypt multiple PDF
+```
+bash -c "for $f in /pdf/*.pdf; do qpdf --encrypt $USERPASS $OWNERPASS $KEYLENGTH -- $f.pdf $f-encrypted.pdf; done"
 ```
 
 combine hoge1.pdf and hoge2.pdf to hoge.pdf
