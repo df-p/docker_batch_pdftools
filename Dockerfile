@@ -3,6 +3,7 @@ LABEL maintainer="Tiryoh <tiryoh@gmail.com>"
 
 RUN apk add --no-cache \
     su-exec \
+    bash \
     pdftk \
     qpdf \
     poppler \
